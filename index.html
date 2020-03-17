@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors!</title>
+</head>
+<body>
+    <button class="rock">Rock</button>
+    <button class="paper">Paper</button>
+    <button class="scissors">Scissors</button>
+
+    <script>
+        const buttons = document.querySelectorAll('button');
+        buttons.forEach(buttons =>
+        buttons.addEventListener('click', function (e) {
+            const playerChoice = document.querySelector(`button[class = "${e.className}"]`);
+            console.log(playerChoice);
+        }));
+
+        function computerChoice(){
+            var choice =  Math.random();
+            if (choice <= 0.34) choice = "rock";
+            if (choice < 0.68 && choice > 0.34) choice = "paper";
+            if (choice >= 0.68) choice = "scissors";
+        }
+
+        function compareChoices(choice1, choice2){
+
+        }
+
+        computerChoice();
+    </script>
+</body>
+</html>
